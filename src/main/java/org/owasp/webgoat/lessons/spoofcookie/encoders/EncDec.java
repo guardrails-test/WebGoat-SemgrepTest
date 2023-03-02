@@ -46,7 +46,7 @@ public class EncDec {
       return null;
     }
 
-    String encoded = value.toLowerCase() + SALT;
+    String encoded = value.toLowerCase() + SALT; // Noncompliant (probs can't detect)
     encoded = revert(encoded);
     encoded = hexEncode(encoded);
     return base64Encode(encoded);

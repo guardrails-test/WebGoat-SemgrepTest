@@ -1,6 +1,5 @@
 == Relying on obscurity
 
-One could rely on HTML, CSS, or javascript to hide links that users don't normally access.
 In the past, a network router tried to protect (hide) admin functionality with javascript in the UI: https://www.wired.com/2009/10/routers-still-vulnerable.
 
 === Finding hidden items

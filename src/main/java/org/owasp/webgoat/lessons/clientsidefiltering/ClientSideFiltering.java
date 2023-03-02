@@ -46,4 +46,4 @@ public class ClientSideFiltering extends Lesson {
   public String getTitle() {
     return "client.side.filtering.title";
   }
-}
+

@@ -49,7 +49,7 @@ public class AccountVerificationHelper {
   public boolean didUserLikelylCheat(HashMap<String, String> submittedAnswers) {
     boolean likely = false;
 
-    if (submittedAnswers.size() == secQuestionStore.get(verifyUserId).size()) {
+   if (submittedAnswers.size() == secQuestionStore.get(verifyUserId).size()) {
       likely = true;
     }
 

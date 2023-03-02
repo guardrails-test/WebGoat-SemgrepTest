@@ -87,7 +87,7 @@ public class JWTFinalEndpoint extends AssignmentEndpoint {
                               connection
                                   .createStatement()
                                   .executeQuery(
-                                      "SELECT key FROM jwt_keys WHERE id = '" + kid + "'");
+                                      "SELECT key FROM jwt_keys WHERE id = '" + kid + "'"); // Noncompliant
                           while (rs.next()) {
                             return TextCodec.BASE64.decode(rs.getString(1));
                           }

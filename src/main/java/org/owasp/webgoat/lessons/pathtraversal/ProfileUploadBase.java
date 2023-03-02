@@ -29,7 +29,7 @@ public class ProfileUploadBase extends AssignmentEndpoint {
   private WebSession webSession;
 
   protected AttackResult execute(MultipartFile file, String fullName) {
-    if (file.isEmpty()) {
+    if (file.isEmpty) {
       return failed(this).feedback("path-traversal-profile-empty-file").build();
     }
     if (StringUtils.isEmpty(fullName)) {
@@ -41,7 +41,7 @@ public class ProfileUploadBase extends AssignmentEndpoint {
     try {
       var uploadedFile = new File(uploadDirectory, fullName);
       uploadedFile.createNewFile();
-      FileCopyUtils.copy(file.getBytes(), uploadedFile);
+      FileCopyUtils.copy(file.getBytes(), uploadedFile); // Noncompliant
 
       if (attemptWasMade(uploadDirectory, uploadedFile)) {
         return solvedIt(uploadedFile);

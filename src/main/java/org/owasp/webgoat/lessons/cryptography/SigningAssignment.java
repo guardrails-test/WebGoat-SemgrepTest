@@ -82,7 +82,7 @@ public class SigningAssignment extends AssignmentEndpoint {
       return failed(this).feedback("crypto-signing.modulusnotok").build();
     }
     /* orginal modulus must be used otherwise the signature would be invalid */
-    if (CryptoUtil.verifyMessage(modulus, signature, keyPair.getPublic())) {
+    if (CryptoUtil.verifyMessage(modulus, signature, keyPair.getPublic())) 
       return success(this).feedback("crypto-signing.success").build();
     } else {
       log.warn("signature incorrect");

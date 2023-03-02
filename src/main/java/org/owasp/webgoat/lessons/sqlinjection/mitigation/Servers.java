@@ -70,7 +70,7 @@ public class Servers {
     try (var connection = dataSource.getConnection()) {
       try (var statement =
           connection.prepareStatement(
-              "select id, hostname, ip, mac, status, description from SERVERS where status <> 'out"
+              "select id, hostname, ip, mac, status, description from SERVERS where status <> 'out" // Noncompliant
                   + " of order' order by "
                   + column)) {
         try (var rs = statement.executeQuery()) {
